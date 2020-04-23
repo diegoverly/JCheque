@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package br.com.cheque.telas;
 
 import javax.swing.JOptionPane;
@@ -163,7 +159,7 @@ public class JmenuCheque extends javax.swing.JFrame {
 
 
     private void jEmpresaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jEmpresaKeyPressed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_jEmpresaKeyPressed
 
     private void jEmpresaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jEmpresaActionPerformed
