@@ -9,13 +9,12 @@ package br.com.cheque.telas;
  *
  * @author Server
  */
-public class jTelaCadEmpresa extends javax.swing.JDialog {
+public class jTelaCadEmpresa extends javax.swing.JFrame {
 
     /**
      * Creates new form jTelaCadEmpresa
      */
-    public jTelaCadEmpresa(java.awt.Frame parent, boolean modal) {
-        super(parent, modal);
+    public jTelaCadEmpresa() {
         initComponents();
     }
 
@@ -69,11 +68,6 @@ public class jTelaCadEmpresa extends javax.swing.JDialog {
         jAlteracao.setText("Alteração");
 
         jExclusao.setText("Exclusão");
-        jExclusao.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jExclusaoActionPerformed(evt);
-            }
-        });
 
         jConsulta.setText("Consulta");
 
@@ -137,7 +131,7 @@ public class jTelaCadEmpresa extends javax.swing.JDialog {
                                 .addComponent(jEstado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addComponent(jTelefone)
                             .addComponent(jSite, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 38, Short.MAX_VALUE)
+                        .addGap(18, 153, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(txtSite, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -166,7 +160,7 @@ public class jTelaCadEmpresa extends javax.swing.JDialog {
                                 .addComponent(jCGC)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(txtCGC)))
-                        .addGap(0, 50, Short.MAX_VALUE))))
+                        .addGap(0, 164, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -233,8 +227,7 @@ public class jTelaCadEmpresa extends javax.swing.JDialog {
                         .addContainerGap(96, Short.MAX_VALUE))))
         );
 
-        setSize(new java.awt.Dimension(822, 551));
-        setLocationRelativeTo(null);
+        pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSairActionPerformed
@@ -242,11 +235,40 @@ public class jTelaCadEmpresa extends javax.swing.JDialog {
         this.dispose();
     }//GEN-LAST:event_jButtonSairActionPerformed
 
-    private void jExclusaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jExclusaoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jExclusaoActionPerformed
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(jTelaCadEmpresa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(jTelaCadEmpresa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(jTelaCadEmpresa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(jTelaCadEmpresa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
 
-   
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new jTelaCadEmpresa().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jAlteracao;
