@@ -205,14 +205,14 @@ public class JmenuCheque extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1021, Short.MAX_VALUE)
+            .addGap(0, 1203, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 524, Short.MAX_VALUE)
+            .addGap(0, 688, Short.MAX_VALUE)
         );
 
-        setSize(new java.awt.Dimension(1037, 584));
+        setSize(new java.awt.Dimension(1219, 748));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
