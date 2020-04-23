@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup1">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup2">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup3">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup4">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup5">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup6">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup7">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup8">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup9">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup10">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup11">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup12">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup13">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup14">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup15">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup16">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup17">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup18">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup19">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup20">
+    </Component>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,61,0,0,3,-84"/>
+    <SyntheticProperty name="formSizePolicy" type="int" value="0"/>
+    <SyntheticProperty name="generateSize" type="boolean" value="true"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jExclusao" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jAlteracao" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jConsulta" alignment="0" min="-2" pref="139" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jButtonSair1" min="-2" pref="139" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jDataEmissao" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jCodigo" alignment="0" min="-2" pref="49" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="txtCodigo" min="-2" pref="69" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                                      <Component id="jNomeFavor" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="txtNomedoFav" min="-2" pref="404" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="txtDataEmissao" min="-2" pref="92" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jRadioBanco" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="jRadioFavor" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="jRadioCliente" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="jRadioOutros" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jValorch" min="-2" pref="91" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="txtvalorcheque" min="-2" pref="181" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="jStatus" min="-2" pref="43" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jCheckBoximportado" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="jDataExpor" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="txtDataExpor" min="-2" pref="136" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jCodigoEmp" min="-2" pref="104" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jDadosdaEmissao" min="-2" pref="247" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="txtCodigoEmp" min="-2" pref="66" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                                      <Component id="jNomeEmp" min="-2" pref="83" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jIncluir" min="-2" pref="139" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="jNumeroCheque" min="-2" pref="73" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="txtNumeroCh" min="-2" pref="85" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="jSerie" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="txtSerie" max="32767" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="jNumeroBco" min="-2" pref="51" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="txtNumeroBco" min="-2" pref="77" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                              <Component id="jAgencia" min="-2" pref="74" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="txtCodigoAgencia" min="-2" pref="69" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="jNomeBanco" min="-2" pref="83" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="txtNomeBanco" min="-2" pref="213" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="jNomeAgencia" min="-2" pref="82" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="txtNomeAgencia" min="-2" pref="266" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="txtNomeEmpresa" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="277" max="-2" attributes="0"/>
+                      <Component id="jCadMovCheque" min="-2" pref="339" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+              <Component id="jCadMovCheque" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jDataEmissao" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtDataEmissao" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRadioBanco" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRadioFavor" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRadioCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRadioOutros" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jCodigo" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtCodigo" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jNomeFavor" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtNomedoFav" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jValorch" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtvalorcheque" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jStatus" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jCheckBoximportado" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jDataExpor" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtDataExpor" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jIncluir" min="-2" pref="73" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jNumeroCheque" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                                  <Component id="txtNumeroCh" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jNumeroBco" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtNumeroBco" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jAgencia" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtCodigoAgencia" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jSerie" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtSerie" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jNomeBanco" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtNomeBanco" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jNomeAgencia" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtNomeAgencia" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="jAlteracao" min="-2" pref="73" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="jExclusao" min="-2" pref="69" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jConsulta" min="-2" pref="69" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jCodigoEmp" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtCodigoEmp" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jNomeEmp" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtNomeEmpresa" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                              <Component id="jDadosdaEmissao" min="-2" pref="74" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                      <Component id="jButtonSair1" min="-2" pref="77" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JButton" name="jIncluir">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Inclus&#xe3;o"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="null"/>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jIncluirActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jAlteracao">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Altera&#xe7;&#xe3;o"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jExclusao">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Exclus&#xe3;o"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jConsulta">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Consulta"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jCadMovCheque">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="18" style="2"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Cadastro de Movimenta&#xe7;&#xe3;o de Cheques"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
+            <BevelBorder/>
+          </Border>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jCodigoEmp">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Codigo da Empresa:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jNumeroCheque">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cheque n&#xba;:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtNumeroCh">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jNumeroBco">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Banco N&#xba;:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtNumeroBco">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jAgencia">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cod.Agencia:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtCodigoAgencia">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jNomeBanco">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Nome Banco:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtNomeBanco">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jNomeAgencia">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Nome Agencia:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtNomeAgencia">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtCodigoEmp">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jNomeEmp">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Nome Empresa:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtNomeEmpresa">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jDadosdaEmissao">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="18" style="2"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Dados da Emiss&#xe3;o do Cheque"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jDataEmissao">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Data da Emiss&#xe3;o:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtDataEmissao">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jCodigo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Codigo:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtCodigo">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jNomeFavor">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Nome do Favorecido:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtNomedoFav">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jValorch">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Valor do Cheque:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtvalorcheque">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jStatus">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Status:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jSerie">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Serie Cheque:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtSerie">
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="jRadioBanco">
+      <Properties>
+        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+          <ComponentRef name="buttonGroup20"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Banco"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+            <EtchetBorder/>
+          </Border>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="jRadioFavor">
+      <Properties>
+        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+          <ComponentRef name="buttonGroup20"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Favorecido"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+            <EtchetBorder/>
+          </Border>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="jRadioCliente">
+      <Properties>
+        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+          <ComponentRef name="buttonGroup20"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Clientes Adm"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+            <EtchetBorder/>
+          </Border>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="jRadioOutros">
+      <Properties>
+        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+          <ComponentRef name="buttonGroup20"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Outros"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+            <EtchetBorder/>
+          </Border>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="jCheckBoximportado">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Exportado"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jDataExpor">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Data da Exporta&#xe7;&#xe3;o:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtDataExpor">
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonSair1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Sair"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSair1ActionPerformed"/>
+      </Events>
+    </Component>
+  </SubComponents>
+</Form>
