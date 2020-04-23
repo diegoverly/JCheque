@@ -181,7 +181,8 @@ public class jTelaFavor extends javax.swing.JFrame {
                 .addGap(17, 17, 17))
         );
 
-        pack();
+        setSize(new java.awt.Dimension(1022, 598));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jIncluirActionPerformed
@@ -230,7 +231,6 @@ public class jTelaFavor extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jAlteracao;
-    private javax.swing.JButton jButtonSair;
     private javax.swing.JButton jButtonSair1;
     private javax.swing.JLabel jCadastrofavor;
     private javax.swing.JLabel jCodigoAg;

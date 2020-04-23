@@ -39,7 +39,7 @@ public class jRedeBancos extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jRedeBancos.setFont(new java.awt.Font("Arial", 2, 18)); // NOI18N
         jRedeBancos.setText("Rede de Bancos ");
@@ -148,7 +148,8 @@ public class jRedeBancos extends javax.swing.JFrame {
                 .addContainerGap(114, Short.MAX_VALUE))
         );
 
-        pack();
+        setSize(new java.awt.Dimension(1046, 686));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jIncluirActionPerformed

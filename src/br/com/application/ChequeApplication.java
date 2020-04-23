@@ -1,4 +1,3 @@
-
 package br.com.application;
 
 import br.com.cheque.telas.*;
@@ -6,10 +5,9 @@ import br.com.cheque.telas.*;
 
 public class ChequeApplication {
 
-   
     public static void main(String[] args) {
-        
-         try {
+
+        try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
@@ -25,15 +23,14 @@ public class ChequeApplication {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(ChequeApplication.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        
-        
       
+
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-              JmenuCheque jmc =  new JmenuCheque();
-              jmc.setVisible(true);
+                JmenuCheque jmc = new JmenuCheque();
+                jmc.setVisible(true);
             }
         });
-    
-}
+
+    }
 }

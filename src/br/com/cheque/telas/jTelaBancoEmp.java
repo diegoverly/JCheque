@@ -241,7 +241,8 @@ public class jTelaBancoEmp extends javax.swing.JFrame {
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jAlteracao, jButtonSair, jExclusao, jIncluir});
 
-        pack();
+        setSize(new java.awt.Dimension(995, 628));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jIncluirActionPerformed

@@ -1,39 +1,48 @@
-
 package br.com.cheque.dal;
 
+import static com.sun.org.apache.bcel.internal.util.SecuritySupport.getResourceAsStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
-
+import java.util.Properties;
 
 public class ModuloConexao {
-    
 
-
-    public static Connection conector() {
+    public static Connection conector() throws Exception {
         java.sql.Connection conexao = null;
-        String driver = "org.firebirdsql.jdbc.FBDriver";
-                 
+        final String driver = "org.firebirdsql.jdbc.FBDriver";
 
         try {
 
             Class.forName(driver);
 
             //executa o arquivo do driver
+            Properties props = loadProperties();
+            String url = props.getProperty("dburl");
 
-            conexao = DriverManager.getConnection("jdbc:firebirdsql://localhost:3050/C:\\DadosPortuga\\CONTAB.FDB", "SYSDBA", "masterkey");
-            //jdbc:firebirdsql://localhost/c:/DadosPortuga/contab.fdb
+            conexao = DriverManager.getConnection(url, props);
+            
 
-            System.out.println (driver);
-                  
-                     
-               return conexao;
- 
-           } catch (Exception e) {
-             e.printStackTrace();
+            return conexao;
+
+        } catch (Exception e) {
+            e.printStackTrace();            
             return null;
-          }
+        }
 
     }
 
+    private static Properties loadProperties() throws Exception {
+
+        try (InputStream inputStream = getResourceAsStream("Jprop.properties")) {
+            Properties props = new Properties();
+            props.load(inputStream);
+            return props;
+        } catch (IOException e) {
+            throw new Exception(e.getMessage());
+        }
+
+    }
 
 }

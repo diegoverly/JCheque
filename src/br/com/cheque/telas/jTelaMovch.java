@@ -322,7 +322,8 @@ public class jTelaMovch extends javax.swing.JFrame {
                 .addGap(30, 30, 30))
         );
 
-        pack();
+        setSize(new java.awt.Dimension(940, 573));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jIncluirActionPerformed
