@@ -236,7 +236,8 @@ public class jTelaCadEmpresa extends javax.swing.JFrame {
                         .addContainerGap(96, Short.MAX_VALUE))))
         );
 
-        pack();
+        setSize(new java.awt.Dimension(1051, 551));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSairActionPerformed
