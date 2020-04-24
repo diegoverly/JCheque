@@ -2,10 +2,11 @@
 package br.com.cheque.telas;
 
 
-public class jTelaMovch extends javax.swing.JFrame {
+public class jTelaMovch extends javax.swing.JDialog {
 
    
-    public jTelaMovch() {
+    public jTelaMovch(java.awt.Frame parent, boolean modal) {
+        super(parent, modal);
         initComponents();
     }
 

@@ -2,10 +2,11 @@
 package br.com.cheque.telas;
 
 
-public class jRedeBancos extends javax.swing.JFrame {
+public class jRedeBancos extends javax.swing.JDialog {
 
    
-    public jRedeBancos() {
+    public jRedeBancos(java.awt.Frame parent, boolean modal) {
+        super(parent, modal);
         initComponents();
     }
 

@@ -2,10 +2,11 @@
 package br.com.cheque.telas;
 
 
-public class jTelaFavor extends javax.swing.JFrame {
+public class jTelaFavor extends javax.swing.JDialog {
 
     
-    public jTelaFavor() {
+    public jTelaFavor(java.awt.Frame parent, boolean modal) {
+        super(parent, modal);
         initComponents();
     }
 

@@ -210,28 +210,28 @@ public class JmenuCheque extends javax.swing.JFrame {
     }
 
     private void ChamaBancoEmp() {
-        jTelaBancoEmp cadbcoemp = new jTelaBancoEmp();
+        jTelaBancoEmp cadbcoemp = new jTelaBancoEmp(new javax.swing.JFrame(), true);
         cadbcoemp.setVisible(true);
     }
 
     private void ChamaFavor() {
-        jTelaFavor CadFavor = new jTelaFavor();
+        jTelaFavor CadFavor = new jTelaFavor(new javax.swing.JFrame(), true);
         CadFavor.setVisible(true);
 
     }
 
     private void ChamaMovch() {
-        jTelaMovch cadmovch = new jTelaMovch();
+        jTelaMovch cadmovch = new jTelaMovch(new javax.swing.JFrame(), true);
         cadmovch.setVisible(true);
     }
 
     private void Rede_bancos() {
-        jRedeBancos Rede_bancos = new jRedeBancos();
+        jRedeBancos Rede_bancos = new jRedeBancos(new javax.swing.JFrame(), true);
         Rede_bancos.setVisible(true);
     }
 
     private void Emissao_Cheque() {
-        jEmissaoCh Emissao_Cheque = new jEmissaoCh();
+        jEmissaoCh Emissao_Cheque = new jEmissaoCh(new javax.swing.JFrame(), true);
         Emissao_Cheque.setVisible(true);
 
     }

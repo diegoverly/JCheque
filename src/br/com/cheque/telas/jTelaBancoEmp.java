@@ -1,15 +1,12 @@
-
 package br.com.cheque.telas;
 
+public class jTelaBancoEmp extends javax.swing.JDialog {
 
-public class jTelaBancoEmp extends javax.swing.JFrame {
-
- 
-    public jTelaBancoEmp() {
+    public jTelaBancoEmp(java.awt.Frame parent, boolean modal) {
+        super(parent, modal);
         initComponents();
     }
 
-    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -243,7 +240,7 @@ public class jTelaBancoEmp extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jIncluirActionPerformed
-        
+
     }//GEN-LAST:event_jIncluirActionPerformed
 
     private void jButtonSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSairActionPerformed
@@ -251,7 +248,6 @@ public class jTelaBancoEmp extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButtonSairActionPerformed
 
- 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jAlteracao;

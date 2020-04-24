@@ -4,10 +4,11 @@ package br.com.cheque.telas;
 import br.com.utils.PorExtenso;
 
 
-public class jEmissaoCh extends javax.swing.JFrame {
+public class jEmissaoCh extends javax.swing.JDialog {
 
     
-    public jEmissaoCh() {
+    public jEmissaoCh(java.awt.Frame parent, boolean modal) {
+        super(parent, modal);
         initComponents();
     }
 
