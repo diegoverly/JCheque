@@ -1,10 +1,7 @@
 
 package br.com.cheque.telas;
 
-/**
- *
- * @author AMERICO
- */
+
 public class jTelaMovch extends javax.swing.JFrame {
 
    
@@ -17,25 +14,6 @@ public class jTelaMovch extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
-        buttonGroup2 = new javax.swing.ButtonGroup();
-        buttonGroup3 = new javax.swing.ButtonGroup();
-        buttonGroup4 = new javax.swing.ButtonGroup();
-        buttonGroup5 = new javax.swing.ButtonGroup();
-        buttonGroup6 = new javax.swing.ButtonGroup();
-        buttonGroup7 = new javax.swing.ButtonGroup();
-        buttonGroup8 = new javax.swing.ButtonGroup();
-        buttonGroup9 = new javax.swing.ButtonGroup();
-        buttonGroup10 = new javax.swing.ButtonGroup();
-        buttonGroup11 = new javax.swing.ButtonGroup();
-        buttonGroup12 = new javax.swing.ButtonGroup();
-        buttonGroup13 = new javax.swing.ButtonGroup();
-        buttonGroup14 = new javax.swing.ButtonGroup();
-        buttonGroup15 = new javax.swing.ButtonGroup();
-        buttonGroup16 = new javax.swing.ButtonGroup();
-        buttonGroup17 = new javax.swing.ButtonGroup();
-        buttonGroup18 = new javax.swing.ButtonGroup();
-        buttonGroup19 = new javax.swing.ButtonGroup();
         buttonGroup20 = new javax.swing.ButtonGroup();
         jIncluir = new javax.swing.JButton();
         jAlteracao = new javax.swing.JButton();
@@ -335,62 +313,10 @@ public class jTelaMovch extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButtonSair1ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(jTelaMovch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(jTelaMovch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(jTelaMovch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(jTelaMovch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new jTelaMovch().setVisible(true);
-            }
-        });
-    }
+ 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.ButtonGroup buttonGroup10;
-    private javax.swing.ButtonGroup buttonGroup11;
-    private javax.swing.ButtonGroup buttonGroup12;
-    private javax.swing.ButtonGroup buttonGroup13;
-    private javax.swing.ButtonGroup buttonGroup14;
-    private javax.swing.ButtonGroup buttonGroup15;
-    private javax.swing.ButtonGroup buttonGroup16;
-    private javax.swing.ButtonGroup buttonGroup17;
-    private javax.swing.ButtonGroup buttonGroup18;
-    private javax.swing.ButtonGroup buttonGroup19;
-    private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup20;
-    private javax.swing.ButtonGroup buttonGroup3;
-    private javax.swing.ButtonGroup buttonGroup4;
-    private javax.swing.ButtonGroup buttonGroup5;
-    private javax.swing.ButtonGroup buttonGroup6;
-    private javax.swing.ButtonGroup buttonGroup7;
-    private javax.swing.ButtonGroup buttonGroup8;
-    private javax.swing.ButtonGroup buttonGroup9;
     private javax.swing.JLabel jAgencia;
     private javax.swing.JButton jAlteracao;
     private javax.swing.JButton jButtonSair1;

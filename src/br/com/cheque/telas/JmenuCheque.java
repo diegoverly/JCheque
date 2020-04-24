@@ -205,7 +205,7 @@ public class JmenuCheque extends javax.swing.JFrame {
 
     private void Chamaempresa() {
 
-        jTelaCadEmpresa cadempresa = new jTelaCadEmpresa();
+        jTelaCadEmpresa cadempresa = new jTelaCadEmpresa(new javax.swing.JFrame(), true);
         cadempresa.setVisible(true);
     }
 
