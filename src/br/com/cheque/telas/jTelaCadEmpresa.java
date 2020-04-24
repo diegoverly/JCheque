@@ -1,6 +1,13 @@
 
 package br.com.cheque.telas;
 
+import br.com.entidades.Empresa;
+import br.com.cheque.dal.EmpresaJDBC;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 
 public class jTelaCadEmpresa extends javax.swing.JDialog {
 
@@ -63,6 +70,11 @@ public class jTelaCadEmpresa extends javax.swing.JDialog {
         jExclusao.setText("Exclusão");
 
         jConsulta.setText("Consulta");
+        jConsulta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jConsultaActionPerformed(evt);
+            }
+        });
 
         jButtonSair.setText("Sair");
         jButtonSair.addActionListener(new java.awt.event.ActionListener() {
@@ -156,9 +168,7 @@ public class jTelaCadEmpresa extends javax.swing.JDialog {
                                     .addComponent(jEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(jSite)
-                                    .addGap(475, 475, 475))))
+                                .addComponent(jSite)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -277,6 +287,21 @@ public class jTelaCadEmpresa extends javax.swing.JDialog {
         // linha abaixo comando para sair
         this.dispose();
     }//GEN-LAST:event_jButtonSairActionPerformed
+
+    private void jConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jConsultaActionPerformed
+        //consulta de teste
+        
+        Empresa emp;
+        
+        try {
+            emp= new EmpresaJDBC().PesquisaPorCodigo(1);
+            
+            System.out.println(emp);
+        } catch (Exception ex) {
+            Logger.getLogger(jTelaCadEmpresa.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }//GEN-LAST:event_jConsultaActionPerformed
 
     
 
