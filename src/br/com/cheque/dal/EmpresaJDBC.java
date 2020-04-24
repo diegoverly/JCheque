@@ -9,15 +9,16 @@ import br.com.entidades.Empresa;
 
 public class EmpresaJDBC {
 
+    Connection conn = null;
+    PreparedStatement st = null;
+    ResultSet rs = null;
+
     public EmpresaJDBC() {
 
     }
 
     public Empresa PesquisaPorCodigo(Integer codigo) throws Exception {
 
-        Connection conn = null;
-        PreparedStatement st = null;
-        ResultSet rs = null;
         try {
             conn = ModuloConexao.conector();
             st = conn.prepareStatement(
@@ -43,11 +44,47 @@ public class EmpresaJDBC {
             return null;
         } catch (Exception e) {
             JOptionPane.showMessageDialog(new JFrame(), "Erro ao consultar por código. \n" + e.getMessage(), "Erro de consulta", JOptionPane.ERROR_MESSAGE);
-            throw new Exception (e);
+            throw new Exception(e);
         } finally {
-            ModuloConexao.closeConnection(conn);
             ModuloConexao.closeStatement(st);
             ModuloConexao.closeResultSet(rs);
+            ModuloConexao.closeConnection(conn);
+        }
+    }
+
+    public void InserirEmpresa(Empresa obj) throws Exception {
+        PreparedStatement st = null;
+        try {
+            conn = ModuloConexao.conector();
+            st = conn.prepareStatement(
+                    "INSERT INTO EMPRESAS "
+                    + "(EMP_CODIGO, EMP_NOME, EMP_ENDERECO, EMP_BAIRRO, EMP_CIDADE, EMP_ESTADO, EMP_UF, EMP_CEP, EMP_TELEFONE, EMP_CGC, EMP_SITE, EMP_EMAIL) "
+                    + "VALUES "
+                    + "(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+            
+            st.setObject(1, obj.getCodigo());
+            st.setString(2, obj.getNome());
+            st.setString(3, obj.getEndereco());
+            st.setString(4, obj.getBairro());
+            st.setString(5, obj.getCidade());
+            st.setString(6, obj.getEstado());
+            st.setString(7, obj.getUF());
+            st.setObject(8, obj.getCEP());
+            st.setObject(9, obj.getTelefone());
+            st.setObject(10, obj.getCGC());
+            st.setString(11, obj.getSite());
+            st.setString(12, obj.getEmail());
+             
+
+            st.executeUpdate();
+
+            JOptionPane.showMessageDialog(new JFrame(), "Cadastro realizado com sucesso.");
+
+        } catch (Exception e) {
+            throw new Exception(e);
+        } finally {
+            ModuloConexao.closeStatement(st);
+            ModuloConexao.closeConnection(conn);
         }
     }
 
