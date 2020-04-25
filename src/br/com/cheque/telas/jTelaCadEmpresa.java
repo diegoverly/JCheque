@@ -68,6 +68,11 @@ public class jTelaCadEmpresa extends javax.swing.JDialog {
         jAlteracao.setText("Alteração");
 
         jExclusao.setText("Exclusão");
+        jExclusao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jExclusaoActionPerformed(evt);
+            }
+        });
 
         jConsulta.setText("Consulta");
         jConsulta.addActionListener(new java.awt.event.ActionListener() {
@@ -181,10 +186,10 @@ public class jTelaCadEmpresa extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(273, 273, 273)
                 .addComponent(jButton1)
-                .addGap(273, 273, 273))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -238,9 +243,9 @@ public class jTelaCadEmpresa extends javax.swing.JDialog {
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jEmail)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
                 .addComponent(jButton1)
-                .addGap(23, 23, 23))
+                .addGap(33, 33, 33))
         );
 
         jLabel3.setText("*Campos obrigatórios.");
@@ -283,8 +288,8 @@ public class jTelaCadEmpresa extends javax.swing.JDialog {
                         .addComponent(jExclusao, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(11, 11, 11)
                         .addComponent(jConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(11, 11, 11)
-                        .addComponent(jButtonSair, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButtonSair, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
                 .addComponent(jLabel3)
@@ -305,30 +310,27 @@ public class jTelaCadEmpresa extends javax.swing.JDialog {
     }//GEN-LAST:event_jConsultaActionPerformed
 
     private void jIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jIncluirActionPerformed
-        
+
         try {
-        Empresa emp = new Empresa(txtCodigoemp.getText().isEmpty() ? null :Integer.parseInt(txtCodigoemp.getText()),
-                txtCep.getText().isEmpty() ? null :Integer.parseInt(txtCep.getText()), txtTelefone.getText().isEmpty() ? null :Integer.parseInt(txtTelefone.getText()), 
-                txtCGC.getText().isEmpty() ? null :Integer.parseInt(txtCGC.getText()), txtNome.getText(), txtEndereco.getText(), txtBairro.getText(), txtCidade.getText(), txtEstado.getText(),
-                txtUF.getText(), txtSite.getText(), txtEmail.getText());
+            Empresa emp = new Empresa(txtCodigoemp.getText().isEmpty() ? null : Integer.parseInt(txtCodigoemp.getText()),
+                    txtCep.getText().isEmpty() ? null : Integer.parseInt(txtCep.getText()), txtTelefone.getText().isEmpty() ? null : Integer.parseInt(txtTelefone.getText()),
+                    txtCGC.getText().isEmpty() ? null : Integer.parseInt(txtCGC.getText()), txtNome.getText(), txtEndereco.getText(), txtBairro.getText(), txtCidade.getText(), txtEstado.getText(),
+                    txtUF.getText(), txtSite.getText(), txtEmail.getText());
 
-        EmpresaJDBC empjdbc = new EmpresaJDBC();
+            EmpresaJDBC empjdbc = new EmpresaJDBC();
 
-        
             empjdbc.InserirEmpresa(emp);
         } catch (Exception ex) {
-            if(ex.getMessage().contains("PRIMARY or UNIQUE KEY")){
-            JOptionPane.showMessageDialog(new JFrame(), "Erro ao inserir cadastro. \n"+
-                    "O código já está cadastrado na base de dados"+ ex.getMessage(), "Erro de cadastro", JOptionPane.ERROR_MESSAGE);
-            }
-            
-            else if(ex.getMessage().contains("For input string:")){
-                
-                JOptionPane.showMessageDialog(new JFrame(), "Erro ao inserir cadastro. \n"+
-                        "Verifique se as informações cadastradas correspondem às retrições: \n"+
-                        "Código, CEP, Telefone e CGC: Apenas números. Demais campos apenas textos. UF com apenas 2 letras."+ ex.getMessage(), "Erro de cadastro", JOptionPane.ERROR_MESSAGE);
-            }else{
-                JOptionPane.showMessageDialog(new JFrame(), "Erro ao inserir cadastro. \n"+ ex.getMessage(), "Erro de cadastro", JOptionPane.ERROR_MESSAGE);
+            if (ex.getMessage().contains("PRIMARY or UNIQUE KEY")) {
+                JOptionPane.showMessageDialog(new JFrame(), "Erro ao inserir cadastro. \n"
+                        + "O código já está cadastrado na base de dados" + ex.getMessage(), "Erro de cadastro", JOptionPane.ERROR_MESSAGE);
+            } else if (ex.getMessage().contains("For input string:")) {
+
+                JOptionPane.showMessageDialog(new JFrame(), "Erro ao inserir cadastro. \n"
+                        + "Verifique se as informações cadastradas correspondem às retrições: \n"
+                        + "Código, CEP, Telefone e CGC: Apenas números. Demais campos apenas textos. UF com apenas 2 letras." + ex.getMessage(), "Erro de cadastro", JOptionPane.ERROR_MESSAGE);
+            } else {
+                JOptionPane.showMessageDialog(new JFrame(), "Erro ao inserir cadastro. \n" + ex.getMessage(), "Erro de cadastro", JOptionPane.ERROR_MESSAGE);
             }
         }
 
@@ -336,7 +338,7 @@ public class jTelaCadEmpresa extends javax.swing.JDialog {
     }//GEN-LAST:event_jIncluirActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
+
         txtBairro.setText("");
         txtCGC.setText("");
         txtCep.setText("");
@@ -349,8 +351,25 @@ public class jTelaCadEmpresa extends javax.swing.JDialog {
         txtSite.setText("");
         txtTelefone.setText("");
         txtUF.setText("");
-        
+
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jExclusaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jExclusaoActionPerformed
+        try {
+            EmpresaJDBC empjdbc = new EmpresaJDBC();
+            empjdbc.excluiEmpresa(Integer.parseInt(txtCodigoemp.getText()));
+
+        } catch (Exception e) {
+            if (e.getMessage().contains("For input string:")) {
+
+                JOptionPane.showMessageDialog(new JFrame(), "Erro ao excluir registro. \n"
+                        + "Código selecionado já foi excluído ou não existe na base de dados: \n" + e.getMessage(), "Erro de cadastro", JOptionPane.ERROR_MESSAGE);
+            } else {
+                JOptionPane.showMessageDialog(new JFrame(), "Erro ao excluir registro. \n" + e.getMessage(), "Erro de exclusão", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+
+    }//GEN-LAST:event_jExclusaoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import br.com.entidades.Empresa;
+import java.sql.SQLException;
 
 public class EmpresaJDBC {
 
@@ -61,7 +62,7 @@ public class EmpresaJDBC {
                     + "(EMP_CODIGO, EMP_NOME, EMP_ENDERECO, EMP_BAIRRO, EMP_CIDADE, EMP_ESTADO, EMP_UF, EMP_CEP, EMP_TELEFONE, EMP_CGC, EMP_SITE, EMP_EMAIL) "
                     + "VALUES "
                     + "(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-            
+
             st.setObject(1, obj.getCodigo());
             st.setString(2, obj.getNome());
             st.setString(3, obj.getEndereco());
@@ -74,14 +75,38 @@ public class EmpresaJDBC {
             st.setObject(10, obj.getCGC());
             st.setString(11, obj.getSite());
             st.setString(12, obj.getEmail());
-             
 
-            st.executeUpdate();
-
-            JOptionPane.showMessageDialog(new JFrame(), "Cadastro realizado com sucesso.");
-
+            int confirm = st.executeUpdate();
+            if (confirm > 0) {
+                JOptionPane.showMessageDialog(new JFrame(), "Cadastro realizado com sucesso.");
+            } else {
+                JOptionPane.showMessageDialog(new JFrame(), "Cadastro não realizado com sucesso.", "Erro na inserção", JOptionPane.ERROR_MESSAGE);
+            }
         } catch (Exception e) {
             throw new Exception(e);
+        } finally {
+            ModuloConexao.closeStatement(st);
+            ModuloConexao.closeConnection(conn);
+        }
+    }
+
+    public void excluiEmpresa(Integer id) throws Exception {
+        PreparedStatement st = null;
+        try {
+            conn = ModuloConexao.conector();
+            st = conn.prepareStatement("delete from EMPRESAS where EMP_CODIGO =?");
+            st.setInt(1, id);
+
+            int confirm = st.executeUpdate();
+
+            if (confirm > 0) {
+                JOptionPane.showMessageDialog(new JFrame(), "Registro excluído com sucesso.");
+            } else {
+                JOptionPane.showMessageDialog(new JFrame(), "Registro não excluído com sucesso. Código já foi excluído ou não existe na base de dados", "Erro na exclusão", JOptionPane.ERROR_MESSAGE);
+            }
+
+        } catch (Exception e) {
+            throw new Exception(e.getMessage());
         } finally {
             ModuloConexao.closeStatement(st);
             ModuloConexao.closeConnection(conn);
