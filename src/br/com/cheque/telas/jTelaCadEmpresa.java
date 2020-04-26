@@ -2,6 +2,7 @@ package br.com.cheque.telas;
 
 import br.com.entidades.Empresa;
 import br.com.cheque.dal.EmpresaJDBC;
+import java.math.BigInteger;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -53,11 +54,13 @@ public class jTelaCadEmpresa extends javax.swing.JDialog {
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Formulário de Cadastro de Empresas");
         setResizable(false);
 
         jLabelEmpresa.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabelEmpresa.setText("Cadastro de Empresa");
 
+        jIncluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/imagens/icons8_add_30px.png"))); // NOI18N
         jIncluir.setText("Inclusão");
         jIncluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,8 +68,10 @@ public class jTelaCadEmpresa extends javax.swing.JDialog {
             }
         });
 
+        jAlteracao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/imagens/icons8_edit_30px.png"))); // NOI18N
         jAlteracao.setText("Alteração");
 
+        jExclusao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/imagens/icons8_delete_30px.png"))); // NOI18N
         jExclusao.setText("Exclusão");
         jExclusao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,6 +79,7 @@ public class jTelaCadEmpresa extends javax.swing.JDialog {
             }
         });
 
+        jConsulta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/imagens/icons8_search_30px.png"))); // NOI18N
         jConsulta.setText("Consulta");
         jConsulta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -81,6 +87,7 @@ public class jTelaCadEmpresa extends javax.swing.JDialog {
             }
         });
 
+        jButtonSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/imagens/icons8_exit_sign_30px.png"))); // NOI18N
         jButtonSair.setText("Sair");
         jButtonSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -133,12 +140,16 @@ public class jTelaCadEmpresa extends javax.swing.JDialog {
                 .addGap(24, 24, 24)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jCodigo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE)
-                            .addComponent(jNomeEmpresa, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jEndereco, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jbairro, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(18, 42, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(jCodigo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE)
+                                    .addComponent(jNomeEmpresa, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jEndereco, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(18, 61, Short.MAX_VALUE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jbairro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(42, 42, 42)))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txtEndereco, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -146,14 +157,16 @@ public class jTelaCadEmpresa extends javax.swing.JDialog {
                                 .addGap(10, 10, 10)
                                 .addComponent(jLabel1)
                                 .addGap(313, 313, 313))
-                            .addComponent(txtNome, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtBairro)))
+                            .addComponent(txtBairro)
+                            .addComponent(txtNome)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jTelefone, javax.swing.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE)
-                            .addComponent(jEstado, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jCidade, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jSite, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jTelefone, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
+                            .addComponent(jSite, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jCidade, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(jEstado, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(283, 283, 283)
@@ -161,16 +174,16 @@ public class jTelaCadEmpresa extends javax.swing.JDialog {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txtEmail))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(42, 42, 42)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(txtTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txtTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(54, 54, 54)
                                         .addComponent(jCGC)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(txtCGC))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(txtEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txtEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
                                         .addComponent(jUf)
                                         .addGap(18, 18, 18)
@@ -179,11 +192,12 @@ public class jTelaCadEmpresa extends javax.swing.JDialog {
                                         .addComponent(jCep)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(txtCep))
-                                    .addComponent(txtCidade)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(txtSite, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(txtSite, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtCidade, javax.swing.GroupLayout.PREFERRED_SIZE, 446, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(0, 0, Short.MAX_VALUE)))))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(0, 0, 0)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25))
             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -270,9 +284,9 @@ public class jTelaCadEmpresa extends javax.swing.JDialog {
                                     .addComponent(jExclusao, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jButtonSair, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(21, 21, 21)
-                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(43, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                .addGap(43, 43, 43))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -290,7 +304,7 @@ public class jTelaCadEmpresa extends javax.swing.JDialog {
                         .addComponent(jConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButtonSair, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
                 .addComponent(jLabel3)
                 .addContainerGap())
@@ -313,7 +327,7 @@ public class jTelaCadEmpresa extends javax.swing.JDialog {
 
         try {
             Empresa emp = new Empresa(txtCodigoemp.getText().isEmpty() ? null : Integer.parseInt(txtCodigoemp.getText()),
-                    txtCep.getText().isEmpty() ? null : Integer.parseInt(txtCep.getText()), txtTelefone.getText().isEmpty() ? null : Integer.parseInt(txtTelefone.getText()),
+                    txtCep.getText().isEmpty() ? null : Integer.parseInt(txtCep.getText()), txtTelefone.getText().isEmpty() ? null : new BigInteger(txtTelefone.getText()),
                     txtCGC.getText().isEmpty() ? null : Integer.parseInt(txtCGC.getText()), txtNome.getText(), txtEndereco.getText(), txtBairro.getText(), txtCidade.getText(), txtEstado.getText(),
                     txtUF.getText(), txtSite.getText(), txtEmail.getText());
 
@@ -355,20 +369,24 @@ public class jTelaCadEmpresa extends javax.swing.JDialog {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jExclusaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jExclusaoActionPerformed
-        try {
-            EmpresaJDBC empjdbc = new EmpresaJDBC();
-            empjdbc.excluiEmpresa(Integer.parseInt(txtCodigoemp.getText()));
 
-        } catch (Exception e) {
-            if (e.getMessage().contains("For input string:")) {
+        int sair = JOptionPane.showConfirmDialog(null, "tem certeza que deseja EXCLUIR o registro: " + txtCodigoemp.getText() + " ?", "Atenção", JOptionPane.YES_NO_OPTION);
 
-                JOptionPane.showMessageDialog(new JFrame(), "Erro ao excluir registro. \n"
-                        + "Código selecionado já foi excluído ou não existe na base de dados: \n" + e.getMessage(), "Erro de cadastro", JOptionPane.ERROR_MESSAGE);
-            } else {
-                JOptionPane.showMessageDialog(new JFrame(), "Erro ao excluir registro. \n" + e.getMessage(), "Erro de exclusão", JOptionPane.ERROR_MESSAGE);
+        if (sair == JOptionPane.YES_OPTION) {
+            try {
+                EmpresaJDBC empjdbc = new EmpresaJDBC();
+                empjdbc.excluiEmpresa(Integer.parseInt(txtCodigoemp.getText()));
+
+            } catch (Exception e) {
+                if (e.getMessage().contains("For input string:")) {
+
+                    JOptionPane.showMessageDialog(new JFrame(), "Erro ao excluir registro. \n"
+                            + "Código selecionado já foi excluído ou não existe na base de dados: \n" + e.getMessage(), "Erro de cadastro", JOptionPane.ERROR_MESSAGE);
+                } else {
+                    JOptionPane.showMessageDialog(new JFrame(), "Erro ao excluir registro. \n" + e.getMessage(), "Erro de exclusão", JOptionPane.ERROR_MESSAGE);
+                }
             }
         }
-
     }//GEN-LAST:event_jExclusaoActionPerformed
 
 

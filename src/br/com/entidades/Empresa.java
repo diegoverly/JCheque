@@ -1,16 +1,19 @@
 
 package br.com.entidades;
 
+import java.math.BigInteger;
+
 
 public class Empresa {
     
-  private Integer codigo, CEP, telefone, CGC;
+  private Integer codigo, CEP, CGC;
+  private BigInteger telefone;
   private String  nome, endereco, bairro, cidade, estado, UF, site, email;
 
     public Empresa() {
     }
   
-    public Empresa(Integer codigo, Integer CEP, Integer telefone, Integer CGC, String nome, String endereco, String bairro, String cidade, String estado, String UF, String site, String email) {
+    public Empresa(Integer codigo, Integer CEP, BigInteger telefone, Integer CGC, String nome, String endereco, String bairro, String cidade, String estado, String UF, String site, String email) {
         this.codigo = codigo;
         this.CEP = CEP;
         this.telefone = telefone;
@@ -33,7 +36,7 @@ public class Empresa {
         return CEP;
     }
 
-    public Integer getTelefone() {
+    public BigInteger getTelefone() {
         return telefone;
     }
 
@@ -81,7 +84,7 @@ public class Empresa {
         this.CEP = CEP;
     }
 
-    public void setTelefone(Integer telefone) {
+    public void setTelefone(BigInteger telefone) {
         this.telefone = telefone;
     }
 

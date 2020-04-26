@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import br.com.entidades.Empresa;
+import java.math.BigInteger;
 import java.sql.SQLException;
 
 public class EmpresaJDBC {
@@ -36,7 +37,7 @@ public class EmpresaJDBC {
                 obj.setEstado(rs.getString("EMP_ESTADO"));
                 obj.setUF(rs.getString("EMP_UF"));
                 obj.setCEP(rs.getInt("EMP_CEP"));
-                obj.setTelefone(rs.getInt("EMP_TELEFONE"));
+                obj.setTelefone((BigInteger) rs.getObject("EMP_TELEFONE"));
                 obj.setCGC(rs.getInt("EMP_CGC"));
                 obj.setSite(rs.getString("EMP_SITE"));
                 obj.setEmail(rs.getString("EMP_EMAIL"));
