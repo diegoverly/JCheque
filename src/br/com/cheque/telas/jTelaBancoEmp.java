@@ -39,7 +39,6 @@ public class jTelaBancoEmp extends javax.swing.JDialog {
         jButtonSair = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1024, 600));
 
         jIncluir.setText("Inclusão");
         jIncluir.addActionListener(new java.awt.event.ActionListener() {
@@ -92,6 +91,8 @@ public class jTelaBancoEmp extends javax.swing.JDialog {
         jContaCorrente.setText("Conta Corrente:");
 
         jCodigoEmp.setText("Codigo da Empresa:");
+
+        txtCodigoEmp.setToolTipText("\"Favor Preencher o campo\"");
 
         jNomeEmp.setText("Nome da Empresa:");
 
